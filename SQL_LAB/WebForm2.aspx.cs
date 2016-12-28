@@ -51,7 +51,7 @@ namespace SQL_LAB
                 TextBox6.Text == "" ||
                 TextBox7.Text == "")
             {
-                Label1.Text = "Something having type please check";
+                Label1.Text = "Something have not type please check";
             }
             else if (TextBox6.Text != TextBox7.Text)
                 Label1.Text = "Please retype password";
