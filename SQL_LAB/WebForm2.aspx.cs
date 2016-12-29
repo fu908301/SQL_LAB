@@ -14,34 +14,14 @@ namespace SQL_LAB
     {
         string strsql = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:/Users/Andy/Desktop/SQL/SQL_LAB/LAB.mdb";
         OleDbConnection icn = new OleDbConnection();
-        private Dictionary<string, string> currentUser = null;
-        private List<Dictionary<string, string>> user_list = new List<Dictionary<string, string>>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            icn.ConnectionString = strsql;
-            if (icn.State == ConnectionState.Open)
-                icn.Close();
-            icn.Open();
-            OleDbCommand cmd = new OleDbCommand(@"select * from student", icn);
-            OleDbDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                if (reader["ID"].ToString() != "")
-                {
-                    user_list.Add(new Dictionary<string, string>
-                    {
-                        {"ID",reader["ID"].ToString()},
-                        {"SNAME",reader["SNAME"].ToString()},
-                        {"PASSWORD",reader["PASSWORD"].ToString()}
-                    }
-                    );
-                }
-            }
-            icn.Close();
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            icn.ConnectionString = strsql;
             bool reg = false;
             if (TextBox1.Text == "" ||
                 TextBox2.Text == "" ||

@@ -27,7 +27,7 @@
         PHONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox5" runat="server" Width="138px"></asp:TextBox>
         <br />
         <br />
-&nbsp;PASSWORD&nbsp;
+        PASSWORD&nbsp;&nbsp;
         <asp:TextBox ID="TextBox6" runat="server" Width="137px"></asp:TextBox>
         <br />
         <br />
